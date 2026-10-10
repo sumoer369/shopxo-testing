@@ -1,4 +1,4 @@
-# ShopXO 商城系统 Bug 列表
+<img width="2560" height="1600" alt="BUG001_弹窗显示6件" src="https://github.com/user-attachments/assets/215c6423-db30-4648-b2e8-3526768e142d" /><img width="2560" height="1600" alt="BUG001_弹窗显示6件" src="https://github.com/user-attachments/assets/92a50cec-0c16-41c8-adee-56ba57734a28" /># ShopXO 商城系统 Bug 列表
 
 ## BUG001：添加商品后弹窗提示数量与实际购物车数量不一致
 
@@ -30,12 +30,12 @@
 ### 截图证据
 
 **弹窗提示显示6件：**
+<img width="2560" height="1600" alt="BUG001_弹窗显示6件" src="https://github.com/user-attachments/assets/d91a69e1-833d-4812-b016-7b76cb02ecbd" />
 
-![BUG001_弹窗显示6件](../screenshots/BUG001_弹窗显示6件.png)
 
 **购物车实际只有5件：**
 
-![BUG001_购物车显示5件](../screenshots/BUG001_购物车显示5件.png)
+<img width="2560" height="1600" alt="BUG001_购物车显示5件" src="https://github.com/user-attachments/assets/fcc81fe8-ec42-4a4c-8438-15b0474a8f3d" />
 
 ### 缺陷分析
 
