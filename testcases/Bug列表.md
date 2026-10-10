@@ -1,4 +1,4 @@
-<img width="2560" height="1600" alt="BUG001_弹窗显示6件" src="https://github.com/user-attachments/assets/215c6423-db30-4648-b2e8-3526768e142d" /><img width="2560" height="1600" alt="BUG001_弹窗显示6件" src="https://github.com/user-attachments/assets/92a50cec-0c16-41c8-adee-56ba57734a28" /># ShopXO 商城系统 Bug 列表
+# ShopXO 商城系统 Bug 列表
 
 ## BUG001：添加商品后弹窗提示数量与实际购物车数量不一致
 
