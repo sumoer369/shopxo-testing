@@ -10,23 +10,15 @@
 - **缺陷管理**：提交并跟踪1个有效缺陷
 
 ## 项目结构
+```text
 shopxo-testing/
 ├── testcases/
-│ ├── ShopXO_测试用例.xlsx # 32条测试用例
-│ └── Bug列表.xlsx # 缺陷记录
+│   ├── 测试用例.md            # 32条测试用例
+│   └── Bug列表.md             # 缺陷记录
 ├── screenshots/
-│ ├── BUG001_弹窗显示6件.png
-│ ├── BUG001_购物车显示5件.png
-│ ├── SQL校验.png
-│ └── Linux日志.png
+│   ├── BUG001_弹窗显示6件.png
+│   ├── BUG001_购物车显示5件.png
+│   ├── SQL校验.png
+│   └── Linux日志.png
 ├── 测试报告.md
 └── README.md
-
-## 测试结论
-共执行32条用例，通过31条，发现1个数据不一致缺陷。
-
-## 使用工具
-- 测试用例：Excel
-- 数据库：MySQL
-- 日志排查：Linux命令（grep、tail、cat）
-- 缺陷管理：Excel
