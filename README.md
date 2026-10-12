@@ -7,14 +7,14 @@
 
 ## 测试工具
 - **功能与数据校验**：Navicat (MySQL)、Linux命令 (grep、tail)
-- **接口与抓包**：F12开发者工具 (抓取线上演示环境请求)、Postman (本地Mock接口验证)
+- **接口与抓包**：F12开发者工具 (抓取线上演示环境请求)、Postman (验证线上接口及本地Mock接口)
 - **性能与自动化**：JMeter (本地Mock接口基础并发验证)、Python + Requests + Pytest + YAML
 
 ## 测试内容
 - **功能测试**：设计32条用例，覆盖登录、搜索、购物车、订单，发现1个数据一致性缺陷（弹窗提示6件，实际5件，已跟踪并验证修复）。
-- **抓包分析**：使用F12开发者工具抓取线上演示环境登录请求，成功解码响应数据 `{"msg":"登录成功","code":0}`。
-- **接口与性能实操（本地Mock）**：由于演示站接口有防护，本地搭建Flask Mock接口。使用Postman验证200/401场景，使用JMeter完成3并发基础验证（异常率0%）。
-- **自动化入门**：基于本地Mock接口，编写Requests + Pytest + YAML基础脚本，实现数据驱动与断言。
+- **抓包与接口测试**：使用F12开发者工具抓取线上演示环境登录请求，分析请求参数；使用Postman复现该线上接口请求，验证异常场景（如验证码过期返回 `{"code": -11}`），并本地Mock验证200/401状态码。
+- **性能与自动化实操**：使用JMeter对本地Mock接口进行3并发基础验证（异常率0%）；编写Requests + Pytest + YAML基础脚本，实现数据驱动与断言。
+- **数据库与日志**：使用Navicat编写SQL子查询及EXPLAIN验证索引，使用Linux命令（grep、tail）排查日志。
 
 ## 项目文件
 - `testcases/`：测试用例与Bug记录（含数据一致性缺陷详情及复现步骤）。
@@ -25,13 +25,16 @@
 ## 项目截图验证（真实操作记录）
 
 **1. 接口与抓包（F12 + Postman）**
-<img width="1259" height="713" alt="f12_capture" src="https://github.com/user-attachments/assets/bf3ac5c6-ca74-4099-8975-08ca506ad01a" />
-<img width="1231" height="1114" alt="postman_api" src="https://github.com/user-attachments/assets/c7c10e09-81f7-4fc2-a632-1af97cf7a481" />
+<img width="1231" height="1114" alt="postman_api" src="https://github.com/user-attachments/assets/871b468e-b9c7-40bb-a99a-fc7b01db86fe" />
+<img width="1097" height="322" alt="f12_capture1" src="https://github.com/user-attachments/assets/143cedae-57ee-4957-bd55-86f3a43e7cc9" />
+<img width="1259" height="713" alt="f12_capture" src="https://github.com/user-attachments/assets/e77344e4-d23a-438d-974d-5858579380e5" />
+
 
 **2. 数据库校验（Navicat SQL）**
-<img width="701" height="566" alt="sql_subquery" src="https://github.com/user-attachments/assets/e4451bce-0eff-4d97-8de1-aaea2e85f787" />
-<img width="706" height="550" alt="sql_index" src="https://github.com/user-attachments/assets/c6ef68c0-07f1-4dd6-aa53-7f85935996af" />
-<img width="680" height="533" alt="sql_first_step" src="https://github.com/user-attachments/assets/e1ac442b-dd32-4dcd-b08a-672fa5ca3ca0" />
+<img width="701" height="566" alt="sql_subquery" src="https://github.com/user-attachments/assets/3d245b82-7917-4f8d-80bd-e7191e1f4d14" />
+<img width="706" height="550" alt="sql_index" src="https://github.com/user-attachments/assets/eb40364d-60bd-4023-b4ba-4e69abedcc0e" />
+<img width="680" height="533" alt="sql_first_step" src="https://github.com/user-attachments/assets/05e6d88b-2d32-4125-8cc1-2f32264aafd1" />
+
 
 ## 如何运行自动化脚本
 ```bash
