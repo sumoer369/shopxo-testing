@@ -17,7 +17,9 @@
 使用 F12 开发者工具抓取 ShopXO 线上演示站的登录请求，分析前后端交互。
 
 **抓包分析截图：**
-![f12_capture](https://github.com/user-attachments/assets/aeb2bd49-a8ee-45e4-92cd-772fd4197053)
+<img width="1097" height="322" alt="f12_capture1" src="https://github.com/user-attachments/assets/4b6a3bd9-7bc0-49f8-a02a-768031c2955b" />
+<img width="1259" height="713" alt="f12_capture" src="https://github.com/user-attachments/assets/5daf216a-3a9d-48f9-a943-b3cc5b3feef1" />
+
 
 ## 三、JMeter 性能测试（本地 Mock）
 使用 JMeter 对本地 Mock 登录接口进行3并发基础验证，异常率0%。
