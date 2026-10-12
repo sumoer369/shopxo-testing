@@ -1,9 +1,8 @@
-
 # ShopXO 商城系统 测试报告
 
 ## 一、测试概述
 - **测试对象**：ShopXO 商城系统（https://d2.shopxo.vip/）
-- **测试类型**：功能测试（黑盒测试）
+- **测试类型**：功能测试（黑盒测试） + 接口测试 + SQL校验
 - **测试范围**：登录、搜索、购物车、订单四大模块
 - **测试时间**：2026-10-10
 
@@ -36,11 +35,10 @@
 **缺陷分析**：该问题为前后端数据不一致，弹窗提示的购物车数量取自后端返回的总数，而购物车列表只显示了当前有效商品，导致数量差异。
 
 ## 六、SQL数据校验
-<img width="307" height="371" alt="34d55a60a9e24448492badf8f4c53cca" src="https://github.com/user-attachments/assets/4cbb1e5f-1a51-4d63-b2a7-11bb3de5a09b" />
-
+![sql_check](https://github.com/user-attachments/assets/4cbb1e5f-1a51-4d63-b2a7-11bb3de5a09b)
 
 ## 七、Linux日志排查
-<img width="1050" height="238" alt="a71a4715fb7a8b937345d933c1a66290" src="https://github.com/user-attachments/assets/8c8c3dca-f9f6-4936-8ebb-bc3de6a6405d" />
+![linux_log](https://github.com/user-attachments/assets/8c8c3dca-f9f6-4936-8ebb-bc3de6a6405d)
 
 ## 八、测试结论
 核心业务流程（登录、搜索、购物车、订单）基本可用，但购物车模块存在数据不一致问题，建议修复后上线。
