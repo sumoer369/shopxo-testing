@@ -4,7 +4,8 @@
 使用 Postman 对 ShopXO 线上演示环境接口进行异常场景验证，并对本地 Mock 接口进行 200/401 场景验证。
 
 **ShopXO 线上真实接口测试（验证码过期场景，返回 code: -11）：**
-![postman_shopxo_real](<!-- 请将你在Postman里测试ShopXO真实接口的截图拖拽到这里 -->)
+<img width="1231" height="1114" alt="postman_api" src="https://github.com/user-attachments/assets/63602c15-7e05-4cd0-bccb-75cd3ed7cdfc" />
+
 
 **本地 Mock 接口正常登录（200）：**
 ![postman_200](https://github.com/user-attachments/assets/c80597d8-9fbe-4498-b0e4-94f311ba6725)
