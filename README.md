@@ -1,4 +1,4 @@
-# ShopXO 电商系统 功能测试与接口实践
+<img width="984" height="598" alt="image" src="https://github.com/user-attachments/assets/1c686113-0f28-4e63-91db-c1b2d6376197" /># ShopXO 电商系统 功能测试与接口实践
 
 > ⚠️ **声明**：本项目为个人自主实战项目，非企业实习项目。旨在完整演练软件测试全流程。
 
@@ -44,7 +44,7 @@
 pip install requests pytest pyyaml flask
 
 # 启动本地 Mock 接口
-python api_automation/mock_api.py
+python mock_api.py
 
 # 执行自动化测试
 pytest api_automation/
