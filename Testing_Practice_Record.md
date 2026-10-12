@@ -41,3 +41,9 @@
 - **预期结果**：弹窗提示件数与购物车实际件数一致。
 - **实际结果**：弹窗显示「购物车共 6 件商品」，实际只有 5 件。
 - **缺陷分析**：前端弹窗取数逻辑有误，未与购物车列表实际数据保持一致。
+## 六、自动化测试与 CI 集成
+基于 Flask 搭建本地 Mock 接口，使用 Python + Requests + Pytest + YAML 编写接口自动化脚本，实现数据驱动与状态码断言。
+
+**GitHub Actions 云端运行结果（2 passed）：**
+<img width="2023" height="1125" alt="image" src="https://github.com/user-attachments/assets/0bf1306c-0464-4a3a-b9d1-cd946c30b16f" />
+
