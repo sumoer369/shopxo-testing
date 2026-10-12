@@ -7,12 +7,12 @@
 
 ## 测试工具
 - **功能与数据校验**：Navicat (MySQL)、Linux命令 (grep、tail)
-- **接口与抓包**：Fiddler (抓取线上演示环境请求)、Postman (本地Mock接口验证)
+- **接口与抓包**：F12开发者工具 (抓取线上演示环境请求)、Postman (本地Mock接口验证)
 - **性能与自动化**：JMeter (本地Mock接口基础并发验证)、Python + Requests + Pytest + YAML
 
 ## 测试内容
 - **功能测试**：设计32条用例，覆盖登录、搜索、购物车、订单，发现1个数据一致性缺陷（弹窗提示6件，实际5件，已跟踪并验证修复）。
-- **抓包分析**：使用Fiddler抓取线上演示环境登录请求，成功解码响应数据 `{"msg":"登录成功","code":0}`。
+- **抓包分析**：使用F12开发者工具抓取线上演示环境登录请求，成功解码响应数据 `{"msg":"登录成功","code":0}`。
 - **接口与性能实操（本地Mock）**：由于演示站接口有防护，本地搭建Flask Mock接口。使用Postman验证200/401场景，使用JMeter完成3并发基础验证（异常率0%）。
 - **自动化入门**：基于本地Mock接口，编写Requests + Pytest + YAML基础脚本，实现数据驱动与断言。
 
@@ -20,8 +20,9 @@
 - `testcases/`：测试用例与Bug记录（含数据一致性缺陷详情及复现步骤）。
 - `api_automation/`：接口自动化测试脚本（含 `mock_api.py`、`api_data.yaml`、`test_login.py` 等）。
 - `Test_Report.md`：完整的测试报告。
-- `Testing_Practice_Record.md`：各工具的详细实操记录与截图（HWUI掉帧、禅道Bug、SQL校验等）。
-- ## 项目截图验证（真实操作记录）
+- `Testing_Practice_Record.md`：各工具的详细实操记录与截图（F12抓包、Postman、JMeter、SQL校验等）。
+
+## 项目截图验证（真实操作记录）
 
 **1. 接口与抓包（F12 + Postman）**
 <img width="1259" height="713" alt="f12_capture" src="https://github.com/user-attachments/assets/bf3ac5c6-ca74-4099-8975-08ca506ad01a" />
@@ -42,4 +43,3 @@ python api_automation/mock_api.py
 
 # 执行自动化测试
 pytest api_automation/
-
