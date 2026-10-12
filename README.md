@@ -17,8 +17,10 @@
 - **数据库与日志**：使用Navicat编写SQL子查询及EXPLAIN验证索引，使用Linux命令（grep、tail）排查日志。
 
 ## 项目文件
+- `api_automation/`：接口自动化测试脚本（含 `test_api.py`）。
+- `mock_api.py`：本地 Flask Mock 接口服务，模拟登录返回 200/401。
+- `api_data.yaml`：接口自动化测试的 YAML 数据文件（供 Pytest 实现数据驱动）。
 - `testcases/`：测试用例与Bug记录（含数据一致性缺陷详情及复现步骤）。
-- `api_automation/`：接口自动化测试脚本（含 `mock_api.py`、`api_data.yaml`、`test_login.py` 等）。
 - `Test_Report.md`：完整的测试报告。
 - `Testing_Practice_Record.md`：各工具的详细实操记录与截图（F12抓包、Postman、JMeter、SQL校验等）。
 
