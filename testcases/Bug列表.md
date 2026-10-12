@@ -38,9 +38,7 @@
 **弹窗提示显示6件：**
 <img width="2560" height="1600" alt="BUG001_弹窗显示6件" src="https://github.com/user-attachments/assets/d91a69e1-833d-4812-b016-7b76cb02ecbd" />
 
-
 **购物车实际只有5件：**
-
 <img width="2560" height="1600" alt="BUG001_购物车显示5件" src="https://github.com/user-attachments/assets/fcc81fe8-ec42-4a4c-8438-15b0474a8f3d" />
 
 ### 缺陷分析
