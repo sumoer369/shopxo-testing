@@ -1,37 +1,34 @@
-
----
-
-### 📄 2. `Testing_Practice_Record.md`（修复Fiddler与F12的矛盾）
-
-```markdown
 # ShopXO 测试设计与工具实践记录
 
-## 一、Postman 接口测试（本地 Mock）
-使用 Postman 对本地 Flask Mock 登录接口进行功能验证。
+## 一、Postman 接口测试（真实接口与本地 Mock）
+使用 Postman 对 ShopXO 线上演示环境接口进行异常场景验证，并对本地 Mock 接口进行 200/401 场景验证。
 
-**正常登录（200）：**
-<img width="719" height="523" alt="postman_200" src="https://github.com/user-attachments/assets/c80597d8-9fbe-4498-b0e4-94f311ba6725" />
+**ShopXO 线上真实接口测试（验证码过期场景，返回 code: -11）：**
+![postman_shopxo_real](<!-- 请将你在Postman里测试ShopXO真实接口的截图拖拽到这里 -->)
 
-**密码错误（401）：**
-<img width="728" height="521" alt="postman_401" src="https://github.com/user-attachments/assets/2d93501c-64f5-410d-83db-d2835af9ce39" />
+**本地 Mock 接口正常登录（200）：**
+![postman_200](https://github.com/user-attachments/assets/c80597d8-9fbe-4498-b0e4-94f311ba6725)
+
+**本地 Mock 接口密码错误（401）：**
+![postman_401](https://github.com/user-attachments/assets/2d93501c-64f5-410d-83db-d2835af9ce39)
 
 ## 二、F12 抓包分析（线上真实请求）
 使用 F12 开发者工具抓取 ShopXO 线上演示站的登录请求，分析前后端交互。
 
 **抓包分析截图：**
-<img width="1253" height="527" alt="f12_capture" src="https://github.com/user-attachments/assets/aeb2bd49-a8ee-45e4-92cd-772fd4197053" />
+![f12_capture](https://github.com/user-attachments/assets/aeb2bd49-a8ee-45e4-92cd-772fd4197053)
 
 ## 三、JMeter 性能测试（本地 Mock）
-使用 JMeter 对本地 Mock 登录接口进行3并发压测，异常率0%。
+使用 JMeter 对本地 Mock 登录接口进行3并发基础验证，异常率0%。
 
 **压测聚合报告：**
-<img width="1003" height="561" alt="jmeter_report" src="https://github.com/user-attachments/assets/241abb3b-4fd2-4cc7-8d6d-bc832ac22469" />
+![jmeter_report](https://github.com/user-attachments/assets/241abb3b-4fd2-4cc7-8d6d-bc832ac22469)
 
 ## 四、SQL 校验与 Linux 日志排查
-使用 Navicat 验证购物车数量数据一致性，使用 Linux grep/tail 命令排查错误日志。
+使用 Navicat 验证购物车数量数据一致性，编写子查询及验证索引；使用 Linux grep/tail 命令排查错误日志。
 
-<img width="307" height="371" alt="sql_check" src="https://github.com/user-attachments/assets/049093b1-9701-46dd-b1cc-cad16c9804a9" />
-<img width="1050" height="238" alt="linux_log" src="https://github.com/user-attachments/assets/c987de96-2e23-40c2-8e95-d377cb9c55bb" />
+![sql_check](https://github.com/user-attachments/assets/049093b1-9701-46dd-b1cc-cad16c9804a9)
+![linux_log](https://github.com/user-attachments/assets/c987de96-2e23-40c2-8e95-d377cb9c55bb)
 
 ## 五、缺陷记录
 **BUG001：添加商品后弹窗提示数量与实际购物车数量不一致**
